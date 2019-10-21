@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/peterm85/config-repository
+          uri: ${CONFIG_REPO_URL}
 
   # Spring properties in case you use different profiles
   profiles:
