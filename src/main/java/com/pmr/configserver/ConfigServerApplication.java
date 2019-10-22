@@ -8,11 +8,6 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer
 public class ConfigServerApplication {
 
-	/**
-	 * Health check:	http://localhost:{port}/actuator/health
-	 * Properties:		http://localhost:{port}/application/default
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		SpringApplication.run(ConfigServerApplication.class, args);
 	}
