@@ -1,10 +1,11 @@
 # HTTP Server
 server:
-  port: 8888
+  port: ${CONFIG_PORT:8888}
 
 spring:
   application:
-    name: ConfigServer
+    name: config-server
+  # Spring Security Config
   security:
     user:
       name: root
@@ -15,7 +16,7 @@ spring:
       server:
         git:
           uri: ${CONFIG_REPO_URL}
-          searchPaths: ryanair, others
+          searchPaths: ryanair, eureka, others
           username: ${REPO_USER}
           password: ${REPO_PASS}
 
