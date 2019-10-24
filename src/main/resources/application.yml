@@ -16,7 +16,7 @@ spring:
       server:
         git:
           uri: ${CONFIG_REPO_URL}
-          searchPaths: ryanair, eureka, others
+          searchPaths: ryanair, eureka, api-gateway, others
           username: ${REPO_USER}
           password: ${REPO_PASS}
 
