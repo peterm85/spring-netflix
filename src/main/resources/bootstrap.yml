@@ -1,0 +1,24 @@
+# HTTP Server
+server:
+  port: ${GATEWAY_PORT:9090}
+ 
+spring:
+  application:
+    name: api-gateway
+  # Spring Cloud Config Server
+  cloud:
+    config:
+      uri: http://localhost:8888
+      name: api-gateway
+      username: root
+      password: '{cipher}936754b678c246bca66531e540e058e92c28fceaa2a2ed5ef1235a8b6f8de218'
+
+# Spring Security Config
+encrypt:
+  key: anyEncryptionKey
+
+# Spring Cloud Register Server  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka
