@@ -1,7 +1,3 @@
-# HTTP Server
-server:
-  port: ${EUREKA_PORT:8761}
-
 spring:
   application:
     name: eureka-server
@@ -17,13 +13,3 @@ spring:
 # Spring Security Config
 encrypt:
   key: anyEncryptionKey
-
-# Spring Cloud Register Server  
-eureka:
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-
-logging:
-  level:
-    root: ERROR
