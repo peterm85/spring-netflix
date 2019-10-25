@@ -1,7 +1,3 @@
-# HTTP Server
-server:
-  port: ${GATEWAY_PORT:9090}
- 
 spring:
   application:
     name: api-gateway
@@ -16,9 +12,3 @@ spring:
 # Spring Security Config
 encrypt:
   key: anyEncryptionKey
-
-# Spring Cloud Register Server  
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:1111/eureka
