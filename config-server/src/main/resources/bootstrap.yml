@@ -1,0 +1,29 @@
+# HTTP Server
+server:
+  port: ${CONFIG_PORT:8888}
+
+spring:
+  application:
+    name: config-server
+  # Spring Security Config
+  security:
+    user:
+      name: root
+      password: '{cipher}936754b678c246bca66531e540e058e92c28fceaa2a2ed5ef1235a8b6f8de218'
+  # Spring Cloud Config Server Repository
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${CONFIG_REPO_URL}
+          searchPaths: ryanair, eureka, api-gateway
+          username: ${REPO_USER}
+          password: ${REPO_PASS}
+
+  # Spring properties in case you use different profiles
+  profiles:
+    active: dev
+
+# Spring Security Config
+encrypt:
+  key: anyEncryptionKey
