@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka-server
+  # Spring Cloud Config Server
+  cloud:
+    config:
+      failFast: true     #el servicio falla en tiempo de arranque si por alguna razón no le es provista su configuración desde el configserver
+      uri: http://localhost:8888
+      name: eureka-server
+      username: root
+      password: '{cipher}936754b678c246bca66531e540e058e92c28fceaa2a2ed5ef1235a8b6f8de218'
+
+# Spring Security Config
+encrypt:
+  key: anyEncryptionKey
